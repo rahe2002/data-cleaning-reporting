@@ -21,9 +21,13 @@ def clean_data(rows):
     return cleaned, removed
 
 def generate_report(cleaned, removed):
+    total_records = len(cleaned) + len(removed)
+    percentage = (len(cleaned) / total_records) * 100 if total_records > 0 else 0
+
     with open("report.txt", "w") as file:
         file.write(f"Valid records: {len(cleaned)}\n")
         file.write(f"Removed records: {len(removed)}\n")
+        file.write(f"Clean data percentage: {percentage:.2f}%\n")
 
 def main():
     data = read_data("data.csv")

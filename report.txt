@@ -1,2 +1,3 @@
 Valid records: 1
 Removed records: 3
+Clean data percentage: 25.00%
