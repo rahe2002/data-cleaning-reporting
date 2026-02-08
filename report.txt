@@ -1,0 +1,2 @@
+Valid records: 1
+Removed records: 3
